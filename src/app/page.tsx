@@ -9,6 +9,7 @@ export default function Home () {
     { length: 11 },
     (_, i) => `/images/coins/${i + 1}.png`
   )
+  const animationDuration = 50
 
   const [currentCoinIndex, setCurrentCoinIndex] = useState(0)
   const [isFlipping, setIsFlipping] = useState(false)
@@ -32,12 +33,12 @@ export default function Home () {
     for (let i = 0; i < coinImages.length - 1; i++) {
       setTimeout(() => {
         updateCoinIndex(currentCoinIndex)
-      }, i * 50)
+      }, i * animationDuration)
     }
 
     setTimeout(() => {
       setIsFlipping(false)
-    }, coinImages.length * 50)
+    }, coinImages.length * animationDuration)
   }
 
   return (
