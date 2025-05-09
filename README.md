@@ -19,3 +19,5 @@
 | Jest       | ^29.7.0 |
 | Tailwind   | ^4      |
 | Typescript | ^5      |
+
+---
