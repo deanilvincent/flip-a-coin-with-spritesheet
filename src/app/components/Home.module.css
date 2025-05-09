@@ -1,0 +1,18 @@
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.container {
+  background: linear-gradient(100deg, #3b82f6, #8b5cf6, #ec4899);
+  background-size: 500% 200%;
+  animation: gradient 23s ease-in-out infinite;
+  -webkit-animation: gradient 23s ease-in-out infinite; /* Webkit browsers */
+  -moz-animation: gradient 23s ease-in-out infinite; /* Firefox-specific prefix */
+}
