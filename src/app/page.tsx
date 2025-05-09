@@ -13,6 +13,14 @@ export default function Home () {
   const [currentCoinIndex, setCurrentCoinIndex] = useState(0)
   const [isFlipping, setIsFlipping] = useState(false)
 
+  const updateCoinIndex = (index: number) => {
+    if (index === coinImages.length - 1) {
+      setCurrentCoinIndex(prevIndex => prevIndex - 1)
+    } else {
+      setCurrentCoinIndex(prevIndex => prevIndex + 1)
+    }
+  }
+
   const flipTheCoin = () => {
     if (isFlipping) return
 
@@ -21,23 +29,15 @@ export default function Home () {
     // if the current index is greater than 0, then it means it's the tail otherwise it's the head which is the index 0
     setCurrentCoinIndex(currentCoinIndex > 0 ? coinImages.length - 1 : 0)
 
-    const animateFlip = () => {
-      for (let i = 0; i < coinImages.length - 1; i++) {
-        setTimeout(() => {
-          if (currentCoinIndex === coinImages.length - 1) {
-            setCurrentCoinIndex(prevIndex => prevIndex - 1)
-          } else {
-            setCurrentCoinIndex(prevIndex => prevIndex + 1)
-          }
-        }, i * 50)
-      }
-
+    for (let i = 0; i < coinImages.length - 1; i++) {
       setTimeout(() => {
-        setIsFlipping(false)
-      }, coinImages.length * 50)
+        updateCoinIndex(currentCoinIndex)
+      }, i * 50)
     }
 
-    animateFlip()
+    setTimeout(() => {
+      setIsFlipping(false)
+    }, coinImages.length * 50)
   }
 
   return (
