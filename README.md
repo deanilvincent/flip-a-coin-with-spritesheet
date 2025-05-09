@@ -2,6 +2,8 @@
 
 [![Node.js CI](https://github.com/deanilvincent/flip-a-coin-with-stripesheet-app/actions/workflows/node.js.yml/badge.svg)](https://github.com/deanilvincent/flip-a-coin-with-stripesheet-app/actions/workflows/node.js.yml)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/569eac58-189b-42b0-850f-bd68c1c06cfa/deploy-status)](https://app.netlify.com/sites/flip-a-coin-stripesheet/deploys)
+
 ### Description
 
 - This is a simple coin flip program that simulates flipping a coin and displays the result using stripesheet images.
