@@ -1,5 +1,7 @@
 # Flip a coin by Mark Deanil Vicente
 
+[![Node.js CI](https://github.com/deanilvincent/flip-a-coin-with-stripesheet-app/actions/workflows/node.js.yml/badge.svg)](https://github.com/deanilvincent/flip-a-coin-with-stripesheet-app/actions/workflows/node.js.yml)
+
 ### Description
 
 - This is a simple coin flip program that simulates flipping a coin and displays the result using stripesheet images.
