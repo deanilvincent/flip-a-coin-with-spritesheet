@@ -7,7 +7,7 @@ import styles from './components/Home.module.css'
 export default function Home () {
   const coinImages = Array.from(
     { length: 11 },
-    (_, i) => `/images/coins/${i + 1}.png`
+    (_, i) => `https://flipacoin.dnilvincent.net/coins/${i + 1}.png`
   )
   const animationDuration = 50
 
